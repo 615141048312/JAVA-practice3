@@ -1,13 +1,19 @@
 package basket;
 
-class Apple {
-	private String name;
-	
-	Apple(String name){
-		this.name = name;
+import java.math.BigDecimal;
+
+class Apple extends Fruit {
+	Apple(String name, BigDecimal price){
+		super(name,price);
 	}
-	
-	String getName() {
+
+	@Override
+	protected String getName() {
 		return name;
+	}
+
+	@Override
+	protected BigDecimal getPrice() {
+		return price;
 	}
 }
